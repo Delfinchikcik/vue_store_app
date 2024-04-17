@@ -1,14 +1,15 @@
 <template>
   <div class="v-main-wrapper">
-
     <vCatalog/>
-    <vCart/>
+    <vCart v-if="CART.length"
+    :cart_data="CART"/>
   </div>
 </template>
 
 <script>
 import vCatalog from "./v-catalog.vue";
 import vCart from "./v-cart.vue";
+import { mapGetters } from "vuex";
 
 export default {
 name: 'v-main-wrapper',
@@ -22,7 +23,9 @@ data(){
         title: ""
     };
 },
-computed:{},
+computed:{
+...mapGetters(['CART'])
+},
 watch:{},
 methods:{},
 created(){},
@@ -33,10 +36,6 @@ mounted(){}
 
 <style scoped>
 .v-main-wrapper{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     max-width: 1400px;
     margin: 0 auto;
 }

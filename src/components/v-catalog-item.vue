@@ -1,9 +1,10 @@
 <template>
   <div class="v-catalog-item">
-    <img class="v-catalog-item_img" :src=" '../src/assets/images/' + product_data.image" alt="foto">
+    <img class="v-catalog-item_img" :src="product_data.image" alt="foto">
+
     <p class="v-catalog-item_name">{{ product_data.name }}</p>
     <p class="v-catalog-item_price">{{ product_data.price }}</p>
-    <button class="v-catalog-item_btn" @click="sendDataToParent">Add to cart</button>
+    <button class="v-catalog-item_btn" @click="addToCart">Add to cart</button>
   </div>
 </template>
 
@@ -11,23 +12,26 @@
 export default {
 name: "v-catalog-item",
 components:{},
+
 props:{
     product_data:{
         type: Object,
+        required: true,
         default(){
             return {}
         }
-
     }
 },
+
 data(){
     return{
         title: "Catalog-item"
     }
 },
+
 methods:{
-    sendDataToParent(){
-        this.$emit('addData',this.product_data.article)
+    addToCart(){
+        this.$emit('addToCart', this.product_data)
     }
 }
 }
