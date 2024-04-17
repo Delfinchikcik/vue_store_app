@@ -4,7 +4,7 @@
 
     <p class="v-catalog-item_name">{{ product_data.name }}</p>
     <p class="v-catalog-item_price">{{ product_data.price }}</p>
-    <button class="v-catalog-item_btn" @click="addToCart">Add to cart</button>
+    <button class="v-catalog-item_btn btn" @click="addToCart">Add to cart</button>
   </div>
 </template>
 
@@ -53,7 +53,7 @@ methods:{
     color: brown;
 }
 .v-catalog-item_btn{
-    background-color: rgb(195, 248, 223);
+    background-color: rgb(92, 202, 151);
     border-radius: 10px;
 }
 .v-catalog-item_img{

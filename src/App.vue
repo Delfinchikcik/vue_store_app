@@ -17,6 +17,6 @@ export default{
   </div>
 </template>
 
-<style scoped>
-
+<style lang="scss">
+@import "node_modules/materialize-css/dist/css/materialize.min.css"
 </style>
