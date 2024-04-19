@@ -65,6 +65,7 @@ export default {
   align-items: center;
   background-color: beige;
   max-width: 900px;
+  background: rgba(81, 116, 43, 0.171);
 }
 .v-cart__item {
   display: flex;
@@ -79,6 +80,7 @@ export default {
 }
 .v-cart_massage {
   font-size: 40px;
+  text-align: center;
 }
 .v-cart_btn {
   font-size: 25px;
