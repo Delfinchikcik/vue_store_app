@@ -48,6 +48,7 @@ methods:{
     margin: 10px;
     padding: 10px;
     font-size: 26px;
+    background-color: rgb(55, 134, 104);
 }
 .v-catalog-item_price{
     color: brown;

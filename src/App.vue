@@ -18,5 +18,12 @@ export default{
 </template>
 
 <style lang="scss">
-@import "node_modules/materialize-css/dist/css/materialize.min.css"
+@import "node_modules\materialize-css\dist\css\materialize.min.css";
+body {
+	background-blend-mode: screen;
+	background:
+		linear-gradient(limegreen, transparent),
+		linear-gradient(90deg, skyblue, transparent),
+		linear-gradient(-90deg, coral, transparent);
+}
 </style>
